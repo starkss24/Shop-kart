@@ -1,0 +1,47 @@
+.products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.products-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.75rem;
+  padding-bottom: 2rem;
+}
+
+.status-message {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  margin: 1.5rem 0;
+}
+
+.status-message.loading {
+  color: #1976d2;
+  font-weight: 500;
+}
+
+.status-message.error {
+  color: #dc2626;
+  background-color: #fef2f2;
+  border-color: #fecaca;
+  font-weight: 500;
+}
+
+.status-message.empty {
+  color: #64748b;
+  font-style: italic;
+}
