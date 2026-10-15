@@ -16,7 +16,10 @@ const orderRoutes = require("./routes/order.routes");
 const app = express();
 
 app.use((req, res, next) => {
-  const allowedOrigins = ['http://localhost:5173', 'https://yourproductionapp.com'];
+  const allowedOrigins = [
+    'http://localhost:5173',
+    'https://starkss24.github.io'
+  ];
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
     res.setHeader('Access-Control-Allow-Origin', origin);

@@ -159,10 +159,11 @@ async function getProfile(req, res) {
 
 async function logoutCustomer(req, res) {
   try {
+    const isProduction = process.env.NODE_ENV === "production";
     res.clearCookie("token", {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "strict",
+      secure: isProduction,
+      sameSite: isProduction ? "none" : "lax",
     });
 
     return res.status(200).json({
